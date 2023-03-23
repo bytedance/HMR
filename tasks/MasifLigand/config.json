@@ -1,0 +1,41 @@
+{
+    "test_freq": 10,
+    "seed": 2023,
+    "auto_resume": true,
+    "mute_tqdm": false,
+    
+    "batch_size": 32,
+    "num_data_workers": 8,
+    "num_gdf": 16,
+    "num_signatures": 16,
+    "smoothing": false,
+    "max_eigen_val": 5.0,
+    "vert_nbr_atoms": 16,
+    "cutoff_radius": 6.0,
+
+    "optimizer": "Adam",
+    "epochs": 400,
+    "warmup_epochs": 10,
+    "lr": 5E-4,
+    "lr_scheduler": "CosineAnnealingLRWithWarmup",
+    "ft_lr": 1E-5,
+    "lr_t0": 400,
+    "lr_eta_min": 1E-6,
+    "lr_tmult": 1,
+    "lr_gamma": 0.5,
+    "weight_decay": 0.0,
+    "clip_grad_norm": 1.0,
+    "fp16": false,
+
+    "model": "HMR",
+    "HMR": {
+        "h_dim": 128,
+        "num_prop_layers": 6,
+        "init_prop_time": 2.0,
+        "propagation_time_scale": 1.0,
+        "apply_band_filter": true,
+        "band_e_mean": 2.0,
+        "band_e_std": 2.0,
+        "dropout": 0.1
+    }
+}
